@@ -1,211 +1,386 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Decker Homes - Central Luzon Real Estate</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+:root {
+  --accent: #3044B7;
+  --accent-hover: #243496;
+  --bg-color: #FFFFFF;
+  --box-shadow-color: #D8DDDE;
+  --text-dark: #1F2937;
+  --text-muted: #6B7280;
+  --card-shadow: 0px 4px 12px #D8DDDE;
+}
 
-  <header id="top">
-    <div class="nav-container">
-      <a href="index.html" class="logo">
-        DECKER
-        <span>HOMES</span>
-      </a>
-      <ul class="nav-links">
-        <li><a href="#top">Home</a></li>
-        <li><a href="properties.html">Properties</a></li>
-        <li><a href="community-map.html">Community Map</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-  </header>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
 
-  <div class="hero-container">
-    <section class="hero">
-      <h1>Find Your Place in Central Luzon</h1>
-      <p>From cozy houses and modern apartments to sleek condos and prime lots — we connect you with properties that match your lifestyle, your budget, and your future.</p>
-      <div class="hero-cta">
-        <a href="properties.html" class="btn-hero btn-primary">Browse Properties</a>
-        <a href="contact.html" class="btn-hero btn-secondary">Book a Consultation</a>
-      </div>
-    </section>
+body {
+  width: 1440px;
+  margin: 0 auto;
+  background-color: #FFFFFF;
+  color: #1F2937;
+  line-height: 1.6;
+}
 
-    <div class="filter-bar">
-      <div class="filter-group">
-        <label for="type">Property Type</label>
-        <select id="type">
-          <option value="">All Types</option>
-          <option value="house">House</option>
-          <option value="apartment">Apartment</option>
-          <option value="condo">Condo</option>
-          <option value="lot">Lot</option>
-        </select>
-      </div>
-      <div class="filter-group">
-        <label for="location">Location</label>
-        <input type="text" id="location" placeholder="Pampanga, Clark, Angeles...">
-      </div>
-      <div class="filter-group">
-        <label for="price">Max Price</label>
-        <select id="price">
-          <option value="">Any Price</option>
-          <option value="100k">&#8361;2,000,000</option>
-          <option value="300k">&#8361;5,000,000</option>
-          <option value="500k">&#8361;10,000,000+</option>
-        </select>
-      </div>
-      <a href="community-map.html" class="btn-submit">Search Map</a>
-    </div>
-  </div>
+/* Header */
+header {
+  width: 1440px;
+  height: 80px;
+  background-color: #FFFFFF;
+  box-shadow: 0px 2px 8px #D8DDDE;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 
-  <section class="section">
-    <h2 class="section-title">Why Decker Homes Is Your Ideal Realtor</h2>
-    <div class="about-content">
-      <p>Finding a property is easy. Finding the right one — at the right price, in the right neighborhood, with a team that actually listens — that's where most people get stuck. Decker Homes solves that. We've spent 10 years building relationships across Central Luzon, studying every pocket of Pampanga's market, and refining a process that puts your goals at the center. Our agents don't just open doors; they open up possibilities you hadn't considered. From your first inquiry to the moment you hold the keys, you're not another transaction. You're the reason we show up. You're in good hands at Decker Home.</p>
-    </div>
-  </section>
+.nav-container {
+  width: 1200px;
+  height: 80px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  <section class="section">
-    <h2 class="section-title">Find the Property That Fits Your Life</h2>
-    <p class="section-subtitle">Every buyer, every family, every investor walks in with a different vision. Maybe you want a house with a garden where kids can play. Maybe you want a low-maintenance condo near the business districts of Clark or San Fernando. Maybe you're after an apartment that keeps you close to work without stretching your budget, or maybe it's a vacant lot where you'll build something entirely your own. Whatever you're picturing, our listings span all four property types — and our agents know how to match you with the one that fits. You're in good hands at Decker Home.</p>
+.logo {
+  font-size: 24px;
+  font-weight: 800;
+  color: #3044B7;
+  text-decoration: none;
+  letter-spacing: -0.5px;
+  display: flex;
+  flex-direction: column;
+  line-height: 0.9;
+}
 
-    <div class="categories-grid">
-      <div class="category-card">
-        <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
-        <h3>House</h3>
-      </div>
-      <div class="category-card">
-        <svg viewBox="0 0 24 24"><path d="M17 11V3H7v4H3v14h18V11h-4zm-8-6h6v2H9V5zm0 4h6v2H9V9zm-4 4h14v6H5v-6z"/></svg>
-        <h3>Apartment</h3>
-      </div>
-      <div class="category-card">
-        <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14H7v-2h5v2zm5-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
-        <h3>Condo</h3>
-      </div>
-      <div class="category-card">
-        <svg viewBox="0 0 24 24"><path d="M14 6l-3.75 5 2.85 3.8L11.5 16 6 20h12l-4-14zM4 20l5-7 2 2.7-3 4H4z"/></svg>
-        <h3>Lot</h3>
-      </div>
-    </div>
+.logo span {
+  font-size: 18px;
+}
 
-    <div class="properties-grid">
-      <a href="community-map.html" class="property-card">
-        <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=500&q=80" alt="Family House" class="property-img">
-        <div class="property-info">
-          <span class="property-type-tag">House</span>
-          <h3>Spacious Suburban House</h3>
-          <p class="property-desc">Features a wide garden space where kids can play, situated in a quiet family-friendly subdivision.</p>
-        </div>
-      </a>
-      <a href="community-map.html" class="property-card">
-        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=500&q=80" alt="Modern Apartment" class="property-img">
-        <div class="property-info">
-          <span class="property-type-tag">Apartment</span>
-          <h3>Budget-Friendly Apartment</h3>
-          <p class="property-desc">Keeps you close to major commercial hubs without stretching your monthly budget.</p>
-        </div>
-      </a>
-      <a href="community-map.html" class="property-card">
-        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=500&q=80" alt="Sleek Condo" class="property-img">
-        <div class="property-info">
-          <span class="property-type-tag">Condo</span>
-          <h3>Low-Maintenance Condo</h3>
-          <p class="property-desc">Conveniently located near the thriving business districts of Clark and San Fernando.</p>
-        </div>
-      </a>
-      <a href="community-map.html" class="property-card">
-        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=500&q=80" alt="Prime Lot" class="property-img">
-        <div class="property-info">
-          <span class="property-type-tag">Lot</span>
-          <h3>Prime Vacant Lot</h3>
-          <p class="property-desc">A clean plot of land giving you full freedom to build something entirely your own.</p>
-        </div>
-      </a>
-    </div>
-  </section>
+.nav-links {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
 
-  <section class="section">
-    <h2 class="section-title">What Our Clients Say</h2>
-    <div class="feedback-grid">
-      <div class="feedback-card">
-        <div>
-          <div class="rating">★★★★★</div>
-          <p>"I thought buying a house would take months of stress. Decker Homes got us from viewing to closing in under five weeks. The team handled everything — the paperwork, the negotiations, even coordinating with the bank. I barely had to lift a finger."</p>
-        </div>
-        <div class="client-info">
-          <div class="client-avatar"></div>
-          <div class="client-details">
-            <strong>Maria C.</strong>
-            <span>First-Time Homeowner, Angeles City</span>
-          </div>
-        </div>
-      </div>
+.nav-links a {
+  text-decoration: none;
+  color: #1F2937;
+  font-weight: 600;
+  font-size: 16px;
+  transition: color 0.2s;
+}
 
-      <div class="feedback-card">
-        <div>
-          <div class="rating">★★★★★</div>
-          <p>"We relocated from Manila to Pampanga and had no idea where to start. Our agent took us on neighborhood tours, explained the pros and cons of each area, and never pressured us. Three months later, we're in a home we genuinely love."</p>
-        </div>
-        <div class="client-info">
-          <div class="client-avatar"></div>
-          <div class="client-details">
-            <strong>The Reyes Family</strong>
-            <span>Relocating Buyers, San Fernando</span>
-          </div>
-        </div>
-      </div>
+.nav-links a:hover {
+  color: #3044B7;
+}
 
-      <div class="feedback-card">
-        <div>
-          <div class="rating">★★★★★</div>
-          <p>"I've dealt with three realtors before Decker Homes, and the difference is night and day. They actually listened to what I wanted — not what they wanted to sell. Found me a condo unit that checked every single box on my list."</p>
-        </div>
-        <div class="client-info">
-          <div class="client-avatar"></div>
-          <div class="client-details">
-            <strong>Kenneth T.</strong>
-            <span>Condo Buyer, Clark Freeport</span>
-          </div>
-        </div>
-      </div>
+/* Hero Section */
+.hero-container {
+  width: 1440px;
+  position: relative;
+  margin-bottom: 100px;
+}
 
-      <div class="feedback-card">
-        <div>
-          <div class="rating">★★★★★</div>
-          <p>"Selling our family home was emotional. The team respected that. They staged the property beautifully, ran a smart campaign, and we closed above asking within two weeks of listing. I can't recommend them enough."</p>
-        </div>
-        <div class="client-info">
-          <div class="client-avatar"></div>
-          <div class="client-details">
-            <strong>Aurora D.</strong>
-            <span>Home Seller, Pampanga</span>
-          </div>
-        </div>
-      </div>
+.hero {
+  width: 1440px;
+  height: 520px;
+  background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #FFFFFF;
+  text-align: center;
+}
 
-      <div class="feedback-card">
-        <div>
-          <div class="rating">★★★★★</div>
-          <p>"What stood out wasn't just the market knowledge — it was how available they were. Late-night questions, last-minute viewing requests, even helping us understand the fine print on the contract. You're genuinely in good hands with these people."</p>
-        </div>
-        <div class="client-info">
-          <div class="client-avatar"></div>
-          <div class="client-details">
-            <strong>Mark & Jenny L.</strong>
-            <span>First-Time Investors, Angeles City</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
 
-  <footer>
-    <p>&copy; 2026 Decker Homes. All rights reserved.</p>
-  </footer>
+.hero p {
+  width: 750px;
+  font-size: 18px;
+  margin-bottom: 32px;
+  opacity: 0.95;
+}
 
-</body>
-</html>
+.hero-cta {
+  display: flex;
+  gap: 16px;
+}
+
+.btn-hero {
+  padding: 14px 28px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.btn-primary {
+  background-color: #3044B7;
+  color: #FFFFFF;
+}
+
+.btn-primary:hover {
+  background-color: #243496;
+}
+
+.btn-secondary {
+  background-color: #FFFFFF;
+  color: #3044B7;
+}
+
+.btn-secondary:hover {
+  background-color: #F0F0F0;
+}
+
+/* Overlapping Filter Bar */
+.filter-bar {
+  position: absolute;
+  bottom: -40px;
+  left: 220px; /* Centers 1000px bar inside 1440px layout */
+  width: 1000px;
+  height: 90px;
+  background: #FFFFFF;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px #D8DDDE;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  border: 1px solid #D8DDDE;
+}
+
+.filter-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.filter-group label {
+  font-size: 13px;
+  color: #6B7280;
+  font-weight: 600;
+}
+
+.filter-group select, 
+.filter-group input {
+  height: 40px;
+  padding: 0 12px;
+  border: 1px solid #D8DDDE;
+  border-radius: 4px;
+  outline: none;
+  font-size: 14px;
+}
+
+.btn-submit {
+  width: 160px;
+  height: 40px;
+  line-height: 40px;
+  background-color: #3044B7;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  text-align: center;
+  margin-top: 18px;
+}
+
+.btn-submit:hover {
+  background-color: #243496;
+}
+
+/* Sections General */
+.section {
+  width: 1200px;
+  margin: 0 auto 80px auto;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 16px;
+  font-size: 32px;
+  color: #1F2937;
+  font-weight: 700;
+}
+
+.section-subtitle {
+  text-align: center;
+  width: 850px;
+  margin: 0 auto 40px auto;
+  color: #6B7280;
+  font-size: 16px;
+}
+
+.about-content {
+  width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 17px;
+  color: #1F2937;
+  background: #FFFFFF;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px #D8DDDE;
+  border: 1px solid #D8DDDE;
+}
+
+/* Property Types (Categories) */
+.categories-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.category-card {
+  width: 280px;
+  height: 160px;
+  background: #FFFFFF;
+  padding: 30px 16px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0px 4px 12px #D8DDDE;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid #D8DDDE;
+}
+
+.category-card svg {
+  width: 48px;
+  height: 48px;
+  fill: #3044B7;
+}
+
+.category-card h3 {
+  font-size: 18px;
+}
+
+/* Properties Grid */
+.properties-grid {
+  display: flex;
+  gap: 24px;
+}
+
+.property-card {
+  width: 282px;
+  background: #FFFFFF;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 4px 12px #D8DDDE;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #D8DDDE;
+}
+
+.property-img {
+  width: 282px;
+  height: 180px;
+  object-fit: cover;
+}
+
+.property-info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.property-type-tag {
+  font-size: 12px;
+  font-weight: 700;
+  color: #3044B7;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.property-info h3 {
+  font-size: 18px;
+}
+
+.property-desc {
+  font-size: 14px;
+  color: #6B7280;
+}
+
+/* Client Feedback Grid */
+.feedback-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.feedback-card {
+  width: 384px;
+  background: #FFFFFF;
+  padding: 28px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px #D8DDDE;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  border: 1px solid #D8DDDE;
+}
+
+.rating {
+  color: #3044B7;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.feedback-card p {
+  font-size: 15px;
+  color: #1F2937;
+}
+
+.client-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-top: 1px solid #D8DDDE;
+  padding-top: 16px;
+}
+
+.client-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #D8DDDE;
+}
+
+.client-details strong {
+  display: block;
+  font-size: 15px;
+}
+
+.client-details span {
+  font-size: 13px;
+  color: #6B7280;
+}
+
+/* Footer */
+footer {
+  width: 1440px;
+  height: 80px;
+  background-color: #3044B7;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+  font-size: 15px;
+}
