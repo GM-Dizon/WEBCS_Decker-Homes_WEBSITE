@@ -28,13 +28,13 @@
 
       <section class="map-search">
         <form>
-            <label for="location-search">Search Location</label>
-            <input
-                type="search"
-                id="location-search"
-                placeholder="Search by city, neighborhood, or address"
-            >
-            <button type="submit">Search</button>
+          <label for="location-search">Search Location</label>
+          <input
+            type="search"
+            id="location-search"
+            placeholder="Search by city, neighborhood, or address"
+          >
+          <button type="submit">Search</button>
         </form>
       </section>
 
@@ -44,41 +44,41 @@
 
         <label for="min-price">Min</label>
         <select id="min-price">
-            <option>₱250,000</option>
-            <option>₱500,000</option>
-            <option>₱750,000</option>
-            <option>₱1,000,000</option>
+          <option>₱250,000</option>
+          <option>₱500,000</option>
+          <option>₱750,000</option>
+          <option>₱1,000,000</option>
         </select>
 
         <label for="max-price">Max</label>
         <select id="max-price">
-            <option>₱700,500</option>
-            <option>₱1,000,000</option>
-            <option>₱2,000,000</option>
-            <option>₱5,000,000</option>
+          <option>₱700,500</option>
+          <option>₱1,000,000</option>
+          <option>₱2,000,000</option>
+          <option>₱5,000,000</option>
         </select>
 
         <label for="location">Location</label>
         <select id="location">
-            <option>Downtown</option>
-            <option>Clark</option>
-            <option>Angeles City</option>
-            <option>San Fernando</option>
+          <option>Downtown</option>
+          <option>Clark</option>
+          <option>Angeles City</option>
+          <option>San Fernando</option>
         </select>
 
         <label for="property-type">Property Type</label>
         <select id="property-type">
-            <option>Apartments</option>
-            <option>Houses</option>
-            <option>Condominiums</option>
-            <option>Lots</option>
+          <option>Apartments</option>
+          <option>Houses</option>
+          <option>Condominiums</option>
+          <option>Lots</option>
         </select>
 
         <label for="floors">Floors</label>
         <select id="floors">
-            <option>2-4 Floors</option>
-            <option>1 Floor</option>
-            <option>5+ Floors</option>
+          <option>2-4 Floors</option>
+          <option>1 Floor</option>
+          <option>5+ Floors</option>
         </select>
 
         <button type="reset">Clear</button>
@@ -87,37 +87,288 @@
       </section>
 
       <section class="community-map">
-        
+
         <div class="map" id="map">
 
-            <div class="map-info">
-                <h1>Map View</h1>
-                <p>128 properties nearby</p>
-            </div>
+          <div class="map-info">
+            <h1>Map View</h1>
+            <p>128 properties nearby</p>
+          </div>
 
-            <button type="button" aria-label="Zoom in">+</button>
-            <button type="button" aria-label="Zoom out">-</button>
+          <button type="button" aria-label="Zoom in">+</button>
+          <button type="button" aria-label="Zoom out">-</button>
 
         </div>
 
         <aside class="properties-nearby">
 
-            <div class="properties-header">
+          <div class="properties-header">
 
-                <div>
-                    <h2>Properties Nearby</h2>
-                    <p>Curated results for your area • 128 listings</p>
-                </div>
-
-                <label for="sort">Sort</label>
-
-                <select id="sort">
-                    <option>Newest</option>
-                    <option>Price: Low to High</option>
-                    <option>Price: High to Low</option>
-                </select>
-
+            <div>
+              <h2>Properties Nearby</h2>
+              <p>Curated results for your area • 128 listings</p>
             </div>
+
+            <label for="sort">Sort</label>
+
+            <select id="sort">
+              <option>Newest</option>
+              <option>Price: Low to High</option>
+              <option>Price: High to Low</option>
+            </select>
+
+          </div>
+
+          <div class="property-list" id="propertyList">
+
+            <article class="property-card" data-property-id="1">
+
+              <img src="Central Downtown.webp" alt="Central Downtown">
+
+              <div class="property-details">
+
+                <h3>Central Downtown</h3>
+
+                <p class="property-price">₱300,450</p>
+
+                <p>1428 Market St., Angeles City</p>
+
+                <p>Downtown • 5 min to metro</p>
+
+                <p>3 Beds | 2 Baths | 1,240 sqft | Floor 2</p>
+
+                <p class="property-poster">
+                  Avery Brooks • 2h ago
+                </p>
+
+                <button type="button">View Details</button>
+
+              </div>
+
+            </article>
+
+
+            <article class="property-card" data-property-id="2">
+
+              <img src="Sky line Villa.webp" alt="Skyline Villa 2BR">
+
+              <div class="property-details">
+
+                <h3>Skyline Villa 2BR</h3>
+
+                <p class="property-price">₱700,500</p>
+
+                <p>88 Skyline Dr., Angeles City</p>
+
+                <p>Skyline • 8 min to metro</p>
+
+                <p>2 Beds | 2 Baths | 1,580 sqft | Floor 2</p>
+
+                <p class="property-poster">
+                  Morgan Lee • 8h ago
+                </p>
+
+                <button type="button">View Details</button>
+
+              </div>
+
+            </article>
+
+
+            <article class="property-card" data-property-id="3">
+
+              <img src="Dormvile Subdivision.jpg" alt="Dormville Subdivision">
+
+              <div class="property-details">
+
+                <h3>Dormville Subdivision</h3>
+
+                <p class="property-price">₱240,500</p>
+
+                <p>San Jose St., Angeles City</p>
+
+                <p>Sunset view • Near park</p>
+
+                <p>2 Beds | 2 Baths | 2,670 sqft | Floor 2</p>
+
+                <p class="property-poster">
+                  Lily Chen • 10h ago
+                </p>
+
+                <button type="button">View Details</button>
+
+              </div>
+
+            </article>
+
+
+            <article class="property-card" data-property-id="4">
+
+              <img src="Roseville Residence.webp" alt="Roseville Residence">
+
+              <div class="property-details">
+
+                <h3>Roseville Residence</h3>
+
+                <p class="property-price">₱600,890</p>
+
+                <p>210 Garden Ave., Angeles City</p>
+
+                <p>Eastside • 3 min walk to park</p>
+
+                <p>Studio | 1 Bath | 960 sqft | Floor 2</p>
+
+                <p class="property-poster">
+                  Sofia Kim • 1d ago
+                </p>
+
+                <button type="button">View Details</button>
+
+              </div>
+
+            </article>
+
+
+            <article class="property-card" data-property-id="5">
+
+              <img src="Delight Residence.jpeg" alt="Delight Residence">
+
+              <div class="property-details">
+
+                <h3>Delight Residence</h3>
+
+                <p class="property-price">₱400,560</p>
+
+                <p>55 Hilltop Blvd., Angeles City</p>
+
+                <p>2 car Parking • Near SM telebastagan</p>
+
+                <p>3 Beds | 3 Baths | 2,400 sqft | Floor 2</p>
+
+                <p class="property-poster">
+                  James Park • 2d ago
+                </p>
+
+                <button type="button">View Details</button>
+
+              </div>
+
+            </article>
+
+
+            <article class="property-card" data-property-id="6">
+
+              <img src="Timog Park.jpg" alt="Timog Park Subdivision">
+
+              <div class="property-details">
+
+                <h3>Timog Park Subdivision</h3>
+
+                <p class="property-price">₱400,430</p>
+
+                <p>Badjao St., Angeles City</p>
+
+                <p>Hilltop • Panoramic city views</p>
+
+                <p>3 Beds | 3 Baths | 3,400 sqft | Floor 2</p>
+
+                <p class="property-poster">
+                  Alonzo Garcia • 3h ago
+                </p>
+
+                <button type="button">View Details</button>
+
+              </div>
+
+            </article>
+
+
+            <article class="property-card" data-property-id="7">
+
+              <img src="Cozy 1BR Retreat.jpeg" alt="Cozy 1BR Retreat">
+
+              <div class="property-details">
+
+                <h3>Cozy 1BR Retreat</h3>
+
+                <p class="property-price">₱200,650</p>
+
+                <p>33 Oak Lane, San Fernando</p>
+
+                <p>Oak District • Quiet street</p>
+
+                <p>1 Bed | 1 Bath | 720 sqft | Floor 1</p>
+
+                <p class="property-poster">
+                  Lily Chen • 2d ago
+                </p>
+
+                <button type="button">View Details</button>
+
+              </div>
+
+            </article>
+
+
+            <article class="property-card" data-property-id="8">
+
+              <img src="Bright Open.jpeg" alt="Bright Open Plan 2BR">
+
+              <div class="property-details">
+
+                <h3>Bright Open Plan 2BR</h3>
+
+                <p class="property-price">₱400,500</p>
+
+                <p>77 Sunset Blvd., Baliwag</p>
+
+                <p>Sunset Strip • Near schools</p>
+
+                <p>2 Beds | 1 Bath | 1,100 sqft | Floor 3</p>
+
+                <p class="property-poster">
+                  Tom Rivers • 4h ago
+                </p>
+
+                <button type="button">View Details</button>
+
+              </div>
+
+            </article>
+
+
+            <article class="property-card" data-property-id="9">
+
+              <img src="Carmenville.jpg" alt="Carmenville Residence">
+
+              <div class="property-details">
+
+                <h3>Carmenville Residence</h3>
+
+                <p class="property-price">₱405,620</p>
+
+                <p>15 House John Ave., Baliwag</p>
+
+                <p>Surise Villa • Near schools</p>
+
+                <p>2 Beds | 1 Bath | 2,500 sqft | Floor 1</p>
+
+                <p class="property-poster">
+                  Mico Torregza • 6h ago
+                </p>
+
+                <button type="button">View Details</button>
+
+              </div>
+
+            </article>
+
+          </div>
+
+        </aside>
+
+      </section>
+
     </main>
 
   </body>
