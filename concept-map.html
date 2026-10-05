@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Community Map | Decker Homes</title>
+    <title>Properties | Decker Homes</title>
     <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+  </head>
+
+  <body>
 
     <header>
       <div class="logo">
@@ -23,5 +24,101 @@
       </nav>
     </header>
 
-</body>
+    <main>
+
+      <section class="map-search">
+        <form>
+            <label for="location-search">Search Location</label>
+            <input
+                type="search"
+                id="location-search"
+                placeholder="Search by city, neighborhood, or address"
+            >
+            <button type="submit">Search</button>
+        </form>
+      </section>
+
+      <section class="filters">
+
+        <button type="button">Filters</button>
+
+        <label for="min-price">Min</label>
+        <select id="min-price">
+            <option>₱250,000</option>
+            <option>₱500,000</option>
+            <option>₱750,000</option>
+            <option>₱1,000,000</option>
+        </select>
+
+        <label for="max-price">Max</label>
+        <select id="max-price">
+            <option>₱700,500</option>
+            <option>₱1,000,000</option>
+            <option>₱2,000,000</option>
+            <option>₱5,000,000</option>
+        </select>
+
+        <label for="location">Location</label>
+        <select id="location">
+            <option>Downtown</option>
+            <option>Clark</option>
+            <option>Angeles City</option>
+            <option>San Fernando</option>
+        </select>
+
+        <label for="property-type">Property Type</label>
+        <select id="property-type">
+            <option>Apartments</option>
+            <option>Houses</option>
+            <option>Condominiums</option>
+            <option>Lots</option>
+        </select>
+
+        <label for="floors">Floors</label>
+        <select id="floors">
+            <option>2-4 Floors</option>
+            <option>1 Floor</option>
+            <option>5+ Floors</option>
+        </select>
+
+        <button type="reset">Clear</button>
+        <button type="submit">Apply</button>
+
+      </section>
+
+      <section class="community-map">
+        
+        <div class="map" id="map">
+
+            <div class="map-info">
+                <h1>Map View</h1>
+                <p>128 properties nearby</p>
+            </div>
+
+            <button type="button" aria-label="Zoom in">+</button>
+            <button type="button" aria-label="Zoom out">-</button>
+
+        </div>
+
+        <aside class="properties-nearby">
+
+            <div class="properties-header">
+
+                <div>
+                    <h2>Properties Nearby</h2>
+                    <p>Curated results for your area • 128 listings</p>
+                </div>
+
+                <label for="sort">Sort</label>
+
+                <select id="sort">
+                    <option>Newest</option>
+                    <option>Price: Low to High</option>
+                    <option>Price: High to Low</option>
+                </select>
+
+            </div>
+    </main>
+
+  </body>
 </html>
