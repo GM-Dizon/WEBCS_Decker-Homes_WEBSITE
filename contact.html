@@ -24,7 +24,107 @@
 
     <main>
 
-    </main>
+        <section class="contact-hero">
+
+            <img
+                src="house.jpeg"
+                alt="BG PIC"
+                class="contact-background"
+            >
+
+            <div class="contact-intro">
+
+                <h1>Let's plan your next adventure</h1>
+
+                <p>
+                    Have a question or a special request?
+                    We'd love to hear from you.
+                </p>
+
+            </div>
+
+
+            <section class="contact-form">
+
+                <h2>Connect with us</h2>
+
+                <p>Share your vision with us.</p>
+
+                <form>
+
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Your full name"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="you@example.com"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="0945-764-2133"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tour">Select Your Tour</label>
+                        <select id="tour" name="tour">
+                            <option value="">Choose your tour...</option>
+                            <option value="property-viewing">Property Viewing</option>
+                            <option value="consultation">Property Consultation</option>
+                            <option value="virtual-tour">Virtual Tour</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="date">Preferred Date</label>
+                        <input
+                            type="date"
+                            id="date"
+                            name="date"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="travelers">Number of Travelers</label>
+                        <input
+                            type="text"
+                            id="travelers"
+                            name="travelers"
+                            placeholder="2 adults, 1 child"
+                        >
+                    </div>
+
+                    <div class="form-group message-group">
+                        <label for="message">Message / Special Requests</label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            placeholder="Anything else we should know?"
+                        ></textarea>
+                    </div>
+
+                    <button type="submit">Submit</button>
+
+                </form>
+
+            </section>
     
   </body>
 </html>
