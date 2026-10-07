@@ -348,3 +348,71 @@ nav a:hover {
   color: var(--muted);
   margin: 0;
 }
+
+/* ===== Why Decker Homes ===== */
+.why-box {
+  background-color: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+}
+
+.why-box p {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* ===== Testimonials ===== */
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.1rem;
+}
+
+.stars {
+  color: var(--star);
+  font-size: 1rem;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+}
+
+.testimonial > p {
+  flex: 1;
+  font-size: 0.8rem;
+  color: var(--text);
+}
+
+.client {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-top: 0.5rem;
+}
+
+.client-image {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--border);
+}
+
+.client h4 {
+  font-size: 0.85rem;
+}
+
+.client p {
+  font-size: 0.7rem;
+  color: var(--muted);
+  margin: 0;
+}
