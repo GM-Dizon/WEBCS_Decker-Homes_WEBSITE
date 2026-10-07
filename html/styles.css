@@ -242,3 +242,60 @@ nav a:hover {
 .search-button:hover {
   background-color: var(--blue-dark);
 }
+
+/* ===== Main Layout ===== */
+.main-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.main-grid section {
+  margin-bottom: 2rem;
+}
+
+.main-grid section > p {
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+/* ===== Property Types ===== */
+.property-types {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.property-type {
+  background-color: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.25rem 0.5rem;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.property-type:hover {
+  transform: translateY(-3px);
+}
+
+.property-type span {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.detail-icon {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+.property-type p {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--blue);
+}
