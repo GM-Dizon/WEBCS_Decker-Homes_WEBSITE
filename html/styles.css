@@ -1318,3 +1318,90 @@ footer a:hover {
     grid-template-columns: 1fr;
   }
 }
+
+/* ===== Contact: Social media ===== */
+.social-media {
+  grid-column: 1;
+  grid-row: 2;
+  align-self: end;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--white);
+}
+
+.social-media p {
+  width: 100%;
+  font-size: 0.95rem;
+  margin: 0 0 0.25rem;
+}
+
+.social-media a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: var(--white);
+  border-radius: 50%;
+  transition: transform 0.2s;
+}
+
+.social-media a:hover {
+  transform: translateY(-3px);
+}
+
+.social-media a img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+/* ===== Contact: Information boxes ===== */
+.contact-information {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.contact-item {
+  padding: 1.75rem 1.25rem;
+  text-align: center;
+  background-color: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.contact-item img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  margin: 0 auto 0.75rem;
+}
+
+.contact-item h2 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact-item p {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 0.2rem;
+}
+
+/* ===== Contact: Social and info responsive ===== */
+@media (max-width: 768px) {
+  .social-media {
+    grid-row: auto;
+  }
+
+  .contact-information {
+    grid-template-columns: 1fr;
+    padding: 2rem 1.5rem;
+  }
+}
