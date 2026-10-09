@@ -618,3 +618,103 @@ footer a:hover {
   }
 }
 
+/* ===== About Us: Team leader ===== */
+.team-leader {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 2rem;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto 3rem;
+  padding: 1.5rem;
+  background-color: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.team-leader img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.team-leader h2 {
+  font-size: 1.3rem;
+  margin-bottom: 0.25rem;
+}
+
+.team-leader h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+}
+
+.team-leader p {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.team-leader button {
+  padding: 0.7rem 1.2rem;
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--blue);
+  background-color: #e3f0fb;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.team-leader button:hover {
+  background-color: var(--blue);
+  color: var(--white);
+}
+
+/* ===== About Us: Team members ===== */
+.team-members {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem 3rem;
+  text-align: center;
+}
+
+.team-members img {
+  width: 100%;
+  max-width: 160px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 12px;
+  margin: 0 auto 0.75rem;
+}
+
+.team-members h3 {
+  font-size: 1rem;
+  margin-bottom: 0.15rem;
+}
+
+.team-members p {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* ===== About Us: Leader and members responsive ===== */
+@media (max-width: 768px) {
+  .team-leader {
+    grid-template-columns: 1fr;
+    margin: 0 1.5rem 2rem;
+  }
+
+  .team-leader img {
+    height: 280px;
+  }
+
+  .team-members {
+    grid-template-columns: 1fr;
+  }
+}
