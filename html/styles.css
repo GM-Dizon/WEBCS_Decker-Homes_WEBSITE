@@ -801,3 +801,129 @@ footer a:hover {
     max-height: 280px;
   }
 }
+
+/* ===== Properties: Search bar ===== */
+.map-search {
+  background-color: var(--white);
+  padding: 1rem 2rem 0.5rem;
+}
+
+.map-search form {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Hide the label visually (the design only shows the placeholder) */
+.map-search label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.map-search input {
+  flex: 1;
+  padding: 0.7rem 1rem;
+  font-family: inherit;
+  font-size: 0.9rem;
+  color: var(--text);
+  background-color: #eef1f5;
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+}
+
+.map-search input:focus {
+  outline: none;
+  background-color: var(--white);
+  border-color: var(--blue);
+}
+
+.map-search button {
+  padding: 0.7rem 1.4rem;
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--white);
+  background-color: var(--blue);
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.map-search button:hover {
+  background-color: var(--blue-dark);
+}
+
+/* ===== Properties: Filters ===== */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.75rem;
+  padding: 0.75rem 2rem 1rem;
+  background-color: var(--white);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.filters label {
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.filters select {
+  padding: 0.45rem 0.8rem;
+  font-family: inherit;
+  font-size: 0.8rem;
+  color: var(--text);
+  background-color: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+}
+
+.filters button {
+  padding: 0.45rem 1rem;
+  font-family: inherit;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text);
+  background-color: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.filters button:hover {
+  background-color: #eef1f5;
+}
+
+.filters button[type="reset"] {
+  border-color: transparent;
+  color: var(--muted);
+}
+
+.filters button[type="submit"] {
+  color: var(--white);
+  background-color: var(--blue);
+  border-color: var(--blue);
+}
+
+.filters button[type="submit"]:hover {
+  background-color: var(--blue-dark);
+}
+
+/* ===== Properties: Search and filters responsive ===== */
+@media (max-width: 768px) {
+  .map-search,
+  .filters {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
