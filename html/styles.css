@@ -515,3 +515,106 @@ footer a:hover {
     grid-template-columns: 1fr;
   }
 }
+
+/* ===== About Us: Intro ===== */
+.about-intro {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  padding: 4rem max(1.5rem, calc((100% - var(--max-width)) / 2));
+  background-color: var(--white);
+}
+
+.about-intro h1 {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  margin-bottom: 1rem;
+}
+
+.about-intro p {
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+/* Light blue note under the intro text */
+.about-intro > div:first-child p:last-of-type {
+  background-color: #e3f0fb;
+  color: var(--blue);
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius);
+  margin-bottom: 0;
+}
+
+.about-intro img {
+  width: 100%;
+  max-height: 320px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+
+/* ===== About Us: Team text ===== */
+.team-introduction {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 1rem;
+  text-align: center;
+}
+
+.team-introduction p {
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+/* ===== About Us: Statistics ===== */
+.statistics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem 3rem;
+  text-align: center;
+}
+
+.statistics span {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.4rem;
+}
+
+.statistics h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0;
+}
+
+.statistics p {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* ===== About Us: Intro and stats responsive ===== */
+@media (max-width: 768px) {
+  .about-intro {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 2.5rem 1.5rem;
+  }
+
+  /* Image goes above the text on smaller screens */
+  .about-intro > div:nth-child(2) {
+    order: -1;
+  }
+
+  .statistics {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .statistics {
+    grid-template-columns: 1fr;
+  }
+}
+
