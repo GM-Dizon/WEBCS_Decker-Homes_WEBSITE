@@ -1053,3 +1053,95 @@ footer a:hover {
     padding: 1rem;
   }
 }
+
+/* ===== Properties: Card list ===== */
+.property-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.9rem;
+}
+
+/* Scoped to .property-list so the homepage cards stay unchanged */
+.property-list .property-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+
+.property-list .property-card:hover {
+  transform: none;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.14);
+}
+
+.property-list .property-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+.property-details {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 0.8rem;
+}
+
+.property-details h3 {
+  font-size: 0.95rem;
+  margin-bottom: 0.2rem;
+}
+
+.property-details p {
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-bottom: 0.3rem;
+}
+
+.property-details .property-price {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--blue);
+}
+
+.property-details .property-poster {
+  margin-top: 0.2rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.property-details button {
+  align-self: flex-end;
+  margin-top: auto;
+  padding: 0.45rem 0.9rem;
+  font-family: inherit;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--white);
+  background-color: var(--blue);
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.property-details button:hover {
+  background-color: var(--blue-dark);
+}
+
+/* ===== Properties: Cards responsive ===== */
+@media (max-width: 1440px) {
+  .property-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .property-list {
+    grid-template-columns: 1fr;
+  }
+}
