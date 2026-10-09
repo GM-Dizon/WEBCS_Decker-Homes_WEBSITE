@@ -718,3 +718,86 @@ footer a:hover {
     grid-template-columns: 1fr;
   }
 }
+
+/* ===== About Us: Vision and Mission ===== */
+.vision,
+.mission {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  background-color: var(--white);
+}
+
+.vision > div,
+.mission > div {
+  padding: 3rem 4rem;
+}
+
+/* The image halves fill their side with no padding */
+.vision > div:last-child,
+.mission > div:first-child {
+  padding: 0;
+  height: 100%;
+}
+
+.vision img,
+.mission img {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  max-height: 420px;
+  object-fit: cover;
+}
+
+.vision h2,
+.mission h2 {
+  font-size: 1.6rem;
+}
+
+.vision p,
+.mission p {
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+/* Check-mark lists */
+.vision > div:first-child > div > div,
+.mission > div:nth-child(2) > div > div {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.6rem;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+.vision .detail-icon,
+.mission .detail-icon {
+  width: 20px;
+  height: 20px;
+  min-height: 0;
+  flex-shrink: 0;
+}
+
+/* ===== About Us: Vision and Mission responsive ===== */
+@media (max-width: 768px) {
+  .vision,
+  .mission {
+    grid-template-columns: 1fr;
+  }
+
+  .vision > div,
+  .mission > div {
+    padding: 2rem 1.5rem;
+  }
+
+  .vision > div:last-child,
+  .mission > div:first-child {
+    padding: 0;
+  }
+
+  .vision img,
+  .mission img {
+    max-height: 280px;
+  }
+}
