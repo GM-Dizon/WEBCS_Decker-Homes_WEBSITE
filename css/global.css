@@ -84,17 +84,31 @@ nav {
 }
 
 nav a {
+  position: relative;
   font-size: 0.9rem;
   font-weight: 500;
   color: var(--text);
   padding: 0.25rem 0;
-  border-bottom: 2px solid transparent;
-  transition: color 0.2s, border-color 0.2s;
+  text-decoration: none;
 }
 
-nav a:hover {
-  color: var(--blue);
-  border-bottom-color: var(--blue);
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--blue);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+nav a:hover::after,
+nav a:active::after,
+nav a.current-page::after {
+  transform: scaleX(1);
 }
 
 #hamburger-nav {

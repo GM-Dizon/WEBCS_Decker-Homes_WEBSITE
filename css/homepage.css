@@ -90,6 +90,10 @@
   border-radius: var(--radius);
 }
 
+.field select {
+  padding-right: 2rem;
+}
+
 .field select:focus,
 .field input:focus {
   outline: none;
@@ -116,7 +120,7 @@
 /*Main Layout*/
 .main-grid {
   display: grid;
-  grid-template-columns: 1.5fr 1fr;
+  grid-template-columns: 1fr;
   gap: 2.5rem;
   align-items: start;
 }
@@ -140,15 +144,24 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
   margin: 2rem 0;
+  justify-items: center;
 }
 
 .property-type {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 90px;
+  aspect-ratio: 1 / 1;
   background-color: var(--white);
-  border-radius: var(--radius);
+  border-radius: 50%;
   box-shadow: var(--shadow);
-  padding: 1.25rem 0.5rem;
+  padding: .5rem;
   text-align: center;
   transition: transform 0.2s;
+  margin-top: 2.5rem;
 }
 
 .property-type:hover {
@@ -158,28 +171,28 @@
 .property-type span {
   display: flex;
   justify-content: center;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
 }
 
 .property-type .detail-icon {
   filter: brightness(0) invert(45%) sepia(17.8%) saturate(3585%) hue-rotate(178.29deg) brightness(53.6%) contrast(103.7%);
 }
 
-
-
 .property-type p {
   margin: 0;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 500;
   color: var(--blue);
 }
 
 /*Property Cards*/
-.property-cards {
+.main-grid .property-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 1rem;
+  margin-bottom: 5rem;
 }
+
 
 .property-card {
   background-color: var(--white);
@@ -305,14 +318,6 @@
   align-items: center;
   gap: 0.7rem;
   margin-top: 0.5rem;
-}
-
-.client-image {
-  flex-shrink: 0;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background-color: var(--border);
 }
 
 .client h4 {
