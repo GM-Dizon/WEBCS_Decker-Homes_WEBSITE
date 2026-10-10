@@ -2,7 +2,7 @@ const viewport = document.querySelector('.slider-viewport');
 const track = document.querySelector('.testimonials');
 const slides = document.querySelectorAll('.testimonial');
 
-const DELAY = 6000;
+const DELAY = 3000;
 
 function cloneSet() {
     slides.forEach((slide) => {
