@@ -2,7 +2,7 @@ const burger = document.querySelector('#hamburger-nav');
 const nav = document.querySelector('#nav');
 const navLinks = document.querySelectorAll('#nav a');
 
-const currentPage = window.location.pathname.split('/').pop() || 'homepage.html';
+const currentPage = window.location.pathname.split('/').pop() || '/';
 navLinks.forEach(link => {
     if (link.getAttribute('href') === currentPage) {
         link.classList.add('current-page');
