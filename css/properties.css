@@ -1,0 +1,301 @@
+/*Decker Homes - Properties page styles*/
+
+/*Services: Intro*/
+.property-intro {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 2.5rem max(1.5rem, calc((100% - var(--max-width)) / 2)) 2rem;
+  background-color: var(--white);
+}
+
+.intro-text {
+  flex: 1;
+  min-width: 280px;
+  max-width: 720px;
+}
+
+.intro-text h1 {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  margin-bottom: 0.75rem;
+}
+
+.intro-text p {
+  font-size: 0.95rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+.intro-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* Outline version so it shows on a white background */
+.intro-buttons .secondary-btn {
+  background-color: transparent;
+  color: var(--blue);
+  border-color: var(--blue);
+}
+
+.intro-buttons .secondary-btn:hover {
+  background-color: var(--blue);
+  color: var(--white);
+}
+
+/*Services: Search bar*/
+.property-search {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 2rem;
+  width: calc(100% - 3rem);
+  max-width: var(--max-width);
+  margin: 1.5rem auto 0;
+  padding: 1rem 1.5rem;
+  background-color: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.search-field {
+  flex: 1;
+  min-width: 160px;
+}
+
+.search-field label {
+  display: block;
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+.search-field p {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text);
+  margin: 0;
+}
+
+.property-search button {
+  padding: 0.65rem 1.6rem;
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--white);
+  background-color: var(--blue);
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.property-search button:hover {
+  background-color: var(--blue-dark);
+}
+
+/*Services: Section headings*/
+.listing-section {
+  padding: 2rem max(1.5rem, calc((100% - var(--max-width)) / 2)) 1rem;
+}
+
+.section-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.section-heading h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.2rem;
+}
+
+.section-heading p {
+  max-width: 700px;
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+.explore-btn {
+  padding: 0.5rem 1.1rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--white);
+  background-color: var(--blue);
+  border-radius: 999px;
+  transition: background-color 0.2s;
+}
+
+.explore-btn:hover {
+  background-color: var(--blue-dark);
+}
+
+/*Services: Intro and search responsive*/
+@media (max-width: 768px) {
+  .property-intro {
+    padding: 2rem 1.5rem 1.5rem;
+  }
+
+  .property-search {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .property-search button {
+    width: 100%;
+  }
+}
+
+/*Services: Listing grid*/
+.property-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+}
+
+.listing-section:last-of-type {
+  padding-bottom: 3rem;
+}
+
+/*Services: Listing card*/
+.listing-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.listing-card:hover {
+  transform: translateY(-4px);
+}
+
+.listing-card > img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+.listing-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 0.8rem;
+}
+
+.listing-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.3rem;
+}
+
+.listing-top span {
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+
+.listing-top strong {
+  font-size: 0.95rem;
+  color: var(--blue);
+}
+
+.listing-content h3 {
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+}
+
+.listing-content p {
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-bottom: 0.6rem;
+}
+
+/* Bed / bath / size row (scoped so the Properties page is unchanged) */
+.listing-card .property-details {
+  display: flex;
+  flex: none;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.2rem 0.75rem;
+  padding: 0;
+  margin-bottom: 0.6rem;
+  font-size: 0.75rem;
+  color: var(--text);
+}
+
+.listing-card .property-details span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.listing-card .detail-icon {
+  width: 14px;
+  height: 14px;
+}
+
+/* Buttons stay at the bottom of every card */
+.card-buttons {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: auto;
+}
+
+.card-buttons a {
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.card-buttons a:first-child {
+  padding: 0.4rem 0.9rem;
+  color: var(--white);
+  background-color: var(--blue);
+  border-radius: 999px;
+  transition: background-color 0.2s;
+}
+
+.card-buttons a:first-child:hover {
+  background-color: var(--blue-dark);
+}
+
+.card-buttons a:last-child {
+  color: var(--text);
+}
+
+.card-buttons a:last-child:hover {
+  color: var(--blue);
+}
+
+/*Services: Cards responsive*/
+@media (max-width: 1440px) {
+  .property-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .property-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .property-grid {
+    grid-template-columns: 1fr;
+  }
+}

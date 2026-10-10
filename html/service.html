@@ -4,22 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services | Decker Homes</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/service.css">
+    <script src="../js/shared.js" defer></script>
   </head>
 
   <body>
     <header>
-      <div class="logo">
-        <img src="../images/Decker-logo-photo (1).png" alt="Decker Homes Logo">
+        <div class="logo">
+            <a href="homepage.html">
+                <img src="../images/Decker-logo-photo (1).png" alt="Decker Homes Logo">
+            </a>
+        </div>
+
+      <div id="hamburger-nav" role="button" tabindex="0" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
 
-      <nav>
-        <a href="homepage.html">Home</a>
-        <a href="properties.html">Properties</a>
-        <a href="concept-map.html">Community Map</a>
-        <a href="about-us.html">About Us</a>
-        <a href="service.html">Services</a>
-        <a href="contact.html">Contact</a>
+      <nav id="nav">
+        <a class="hamburger-link" href="homepage.html">Home</a>
+        <a class="hamburger-link" href="properties.html">Properties</a>
+        <a class="hamburger-link" href="concept-map.html">Community Map</a>
+        <a class="hamburger-link" href="about-us.html">About Us</a>
+        <a class="hamburger-link" href="service.html">Services</a>
+        <a class="hamburger-link" href="contact.html">Contact</a>
       </nav>
     </header>
 

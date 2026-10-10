@@ -4,23 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | Decker Homes</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/about-us.css">
+    <script src="../js/shared.js" defer></script>
   </head>
 
   <body>
-
     <header>
-      <div class="logo">
-        <img src="../images/Decker-logo-photo (1).png" alt="Decker Homes Logo">
+        <div class="logo">
+            <a href="homepage.html">
+                <a href="homepage.html">
+                <img src="../images/Decker-logo-photo (1).png" alt="Decker Homes Logo">
+            </a>
+        </div>
+
+      <div id="hamburger-nav" role="button" tabindex="0" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
 
-      <nav>
-        <a href="homepage.html">Home</a>
-        <a href="properties.html">Properties</a>
-        <a href="concept-map.html">Community Map</a>
-        <a href="about-us.html">About Us</a>
-        <a href="service.html">Services</a>
-        <a href="contact.html">Contact</a>
+      <nav id="nav">
+        <a class="hamburger-link" href="homepage.html">Home</a>
+        <a class="hamburger-link" href="properties.html">Properties</a>
+        <a class="hamburger-link" href="concept-map.html">Community Map</a>
+        <a class="hamburger-link" href="about-us.html">About Us</a>
+        <a class="hamburger-link" href="service.html">Services</a>
+        <a class="hamburger-link" href="contact.html">Contact</a>
       </nav>
     </header>
 
@@ -40,7 +50,7 @@
                     and investors through thousands of successful transactions.
                 </p>
 
-                <p>
+                <p class="light-blue-box-p">
                     We carry a 4.5/5 satisfaction rating that reflects the
                     consistency of that experience.
                 </p>
@@ -58,7 +68,7 @@
 
         <section class="team-introduction">
 
-            <h2>Our Team</h2>
+            <h2 class="about-heading">Our Team</h2>
 
             <p>
                 Every realtor at Decker Homes brings at least 5 years of
@@ -69,40 +79,40 @@
                 knows how to protect your interests through all of it.
             </p>
 
-        </section>
+            <div class="statistics">
 
-        <section class="statistics">
+                <div>
+                    <span>
+                        <img src="../images/star.png" alt="star" class="detail-icon">
+                    </span>
+                    <h2>4.5</h2>
+                    <p>Star Ratings</p>
+                </div>
 
-            <div>
-                <span>
-                    <img src="../images/star.png" alt="star" class="detail-icon">
-                </span>
-                <h2>4.5</h2>
-                <p>Star Ratings</p>
-            </div>
+                <div>
+                    <span>
+                        <img src="../images/house.png" alt="house" class="detail-icon">
+                    </span>
+                    <h2>+100</h2>
+                    <p>Houses Sold</p>
+                </div>
 
-            <div>
-                <span>
-                    <img src="../images/house.png" alt="house" class="detail-icon">
-                </span>
-                <h2>+100</h2>
-                <p>Houses Sold</p>
-            </div>
+                <div>
+                    <span>
+                        <img src="../images/agents.png" alt="user" class="detail-icon">
+                    </span>
+                    <h2>+30</h2>
+                    <p>Estate Agents</p>
+                </div>
 
-            <div>
-                <span>
-                    <img src="../images/agents.png" alt="user" class="detail-icon">
-                </span>
-                <h2>+30</h2>
-                <p>Estate Agents</p>
-            </div>
+                <div>
+                    <span>
+                        <img src="../images/feedback.png" alt="feedback" class="detail-icon">
+                    </span>
+                    <h2>100%</h2>
+                    <p>Positive Feedback</p>
+                </div>
 
-            <div>
-                <span>
-                    <img src="../images/feedback.png" alt="feedback" class="detail-icon">
-                </span>
-                <h2>100%</h2>
-                <p>Positive Feedback</p>
             </div>
 
         </section>
@@ -117,10 +127,10 @@
                 >
             </div>
 
-            <div>
+            <div id="team-leader-content">
                 <h2>Decker's Team Leader:</h2>
 
-                <h3>Jomel Garcia</h3>
+                <h3 id="leader-h3">Jomel Garcia</h3>
 
                 <p>
                     Jomel has spent 8 years in the real estate industry,
@@ -132,7 +142,9 @@
                 </p>
 
                 <button type="button">
-                    Contact Jomel: +63 912 345 6789
+                    <a href="contact.html">
+                        Contact Jomel: +63 912 345 6789
+                    </a>
                 </button>
             </div>
 
@@ -146,8 +158,23 @@
                     src="../images/miguel.jpg"
                     alt="Miguel Santos"
                 >
-                <h3>Miguel Santos</h3>
-                <p>Senior Property Consultant</p>
+                <div>
+                    <h3>Miguel Santos</h3>
+                    <p class="team-member-position">Senior Property Consultant</p>
+                    <p class="team-member-desc">
+                        Miguel came to real estate from banking, and it shows.
+                        He's the go-to for investors and commercial clients who
+                        need to understand cap rates, ROI projections, and market
+                        timing — but he's just as at home helping a young couple
+                        buy their starter house. Calm, methodical, and quietly
+                        relentless in negotiation, Miguel turns complex deals
+                        into clean closings.
+                    </p>
+                    <p class="light-blue-box-p team-member-blue-box">
+                        "Banking-honed expertise for investors and first-time
+                        buyers alike, with calm, methodical negotiation."
+                    </p>
+                </div>
             </article>
 
             <article>
@@ -155,8 +182,22 @@
                     src="../images/angela.jpg"
                     alt="Angela Reyes"
                 >
-                <h3>Angela Reyes</h3>
-                <p>Senior Property Consultant</p>
+                <div>
+                    <h3>Angela Reyes</h3>
+                    <p class="team-member-position">Senior Property Consultant</p>
+                    <p class="team-member-desc">
+                        Angela is the agent you want when details matter. She's
+                        known for her encyclopedic knowledge of Angeles and San
+                        Fernando subdivisions, her patient approach with
+                        first-time buyers, and her almost unnerving ability to
+                        spot a property's hidden potential — or its hidden
+                        problems — within minutes of walking through the door.
+                    </p>
+                    <p class="light-blue-box-p team-member-blue-box">
+                        "Encyclopedic knowledge of local subdivisions, and a
+                        patient eye for hidden potential."
+                    </p>
+                </div>
             </article>
 
             <article>
@@ -164,8 +205,21 @@
                     src="../images/rafael.jpg"
                     alt="Rafael Tolentino"
                 >
-                <h3>Rafael Tolentino</h3>
-                <p>Junior Property Consultant</p>
+                <div>
+                    <h3>Rafael Tolentino</h3>
+                    <p class="team-member-position">Junior Property Consultant</p>
+                    <p class="team-member-desc">
+                        Rafael knows vertical living inside and out. He tracks
+                        developer pipelines, understands association governance,
+                        and can compare amenities and price-per-square-meter
+                        across buildings from memory. His honesty has earned him a
+                        loyal base of repeat clients and referrals.
+                    </p>
+                    <p class="light-blue-box-p team-member-blue-box">
+                        "A walking knowledge base on condo buildings, matched by an
+                        honesty that keeps clients coming back."
+                    </p>
+                </div>
             </article>
 
             <article>
@@ -173,8 +227,21 @@
                     src="../images/dianne.jpg"
                     alt="Dianne Carlos"
                 >
-                <h3>Dianne Carlos</h3>
-                <p>Junior Property Consultant</p>
+                <div>
+                    <h3>Dianne Carlos</h3>
+                    <p class="team-member-position">Junior Property Consultant</p>
+                    <p class="team-member-desc">
+                        Dianne brings 5 years of real estate experience and an
+                        energy that's impossible to miss. She's built a personal
+                        network across Central Luzon that often surfaces
+                        off-market opportunities before they hit public listings,
+                        giving her buyers a genuine edge.
+                    </p>
+                    <p class="light-blue-box-p team-member-blue-box">
+                        "Five years of experience and a Central Luzon network that
+                        surfaces off-market opportunities first."
+                    </p>
+                </div>
             </article>
 
         </section>
@@ -183,7 +250,7 @@
 
             <div>
 
-                <h2>Our Vision</h2>
+                <h2 class="about-heading">Our Vision</h2>
 
                 <p>
                     To be Central Luzon's most trusted real estate partner
@@ -238,7 +305,7 @@
 
             <div>
 
-                <h2>Our Mission</h2>
+                <h2 class="about-heading">Our Mission</h2>
 
                 <p>
                     To deliver exceptional real estate experiences through

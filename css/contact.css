@@ -1,0 +1,260 @@
+/*Contact: Hero*/
+.contact-hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr;
+  gap: 2rem 3rem;
+  align-items: start;
+  min-height: 640px;
+  padding: 4rem max(1.5rem, calc((100% - var(--max-width)) / 2));
+  background-color: var(--blue-dark);
+  overflow: hidden;
+}
+
+/* Background photo fills the whole hero */
+.contact-background {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contact-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(8, 30, 56, 0.65);
+  z-index: 1;
+}
+
+.contact-intro,
+.contact-form,
+.social-media {
+  position: relative;
+  z-index: 2;
+}
+
+.contact-intro {
+  grid-column: 1;
+  grid-row: 1;
+  color: var(--white);
+}
+
+.contact-intro h1 {
+  color: var(--white);
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 1rem;
+}
+
+.contact-intro p {
+  font-size: 1.1rem;
+  font-weight: 300;
+  margin: 0;
+}
+
+.contact-form {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  padding: 2rem;
+  background-color: var(--white);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+
+.contact-form h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.contact-form > p {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 1.25rem;
+}
+
+.contact-form form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--muted);
+  margin-bottom: 0.35rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.65rem 0.75rem;
+  font-family: inherit;
+  font-size: 0.9rem;
+  color: var(--text);
+  background-color: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--blue);
+}
+
+.form-group textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Message box and Submit button span both columns */
+.message-group,
+.contact-form form button {
+  grid-column: 1 / -1;
+}
+
+.contact-form form button {
+  padding: 0.8rem 1.5rem;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--white);
+  background-color: var(--blue);
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.contact-form form button:hover {
+  background-color: var(--blue-dark);
+}
+
+/*Contact: Hero and form responsive*/
+@media (max-width: 768px) {
+  .contact-hero {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    min-height: 0;
+    padding: 3rem 1.5rem;
+    margin-top: 4.5rem;
+  }
+
+  .contact-intro,
+  .contact-form,
+  .social-media {
+    grid-column: 1;
+    grid-row: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-hero {
+    margin-top: 4.5rem;
+  }
+  
+  .contact-form {
+    padding: 1.25rem;
+  }
+
+  .contact-form form {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*Contact: Social media*/
+.social-media {
+  grid-column: 1;
+  grid-row: 2;
+  align-self: end;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--white);
+}
+
+.social-media p {
+  width: 100%;
+  font-size: 0.95rem;
+  margin: 0 0 0.25rem;
+}
+
+.social-media a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: var(--white);
+  border-radius: 50%;
+  transition: transform 0.2s;
+}
+
+.social-media a:hover {
+  transform: translateY(-3px);
+}
+
+.social-media a img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+/*Contact: Information boxes*/
+.contact-information {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.contact-item {
+  padding: 1.75rem 1.25rem;
+  text-align: center;
+  background-color: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.contact-item img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  margin: 0 auto 0.75rem;
+}
+
+.contact-item h2 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact-item p {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 0.2rem;
+}
+
+/*Contact: Social and info responsive*/
+@media (max-width: 768px) {
+  .social-media {
+    grid-row: auto;
+  }
+
+  .contact-information {
+    grid-template-columns: 1fr;
+    padding: 2rem 1.5rem;
+  }
+}

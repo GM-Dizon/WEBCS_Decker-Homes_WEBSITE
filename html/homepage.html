@@ -4,37 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Decker Homes</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/homepage.css">
+    <script src="../js/shared.js" defer></script>
+    <script src="../js/homepage.js" defer></script>
   </head>
   <body>
     <header>
         <div class="logo">
-            <img src="../images/Decker-logo-photo (1).png" alt="Decker Homes Logo">
+            <a href="homepage.html">
+                <img src="../images/Decker-logo-photo (1).png" alt="Decker Homes Logo">
+            </a>
         </div>
 
-        <nav>
-            <a href ="#">Home</a>
-            <a href ="#">Properties</a>
-            <a href ="#">Community Map</a>
-            <a href ="#">About Us</a>
-            <a href ="#">Services</a>
-            <a href ="#">Contact</a>
-        </nav>
+      <div id="hamburger-nav" role="button" tabindex="0" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <nav id="nav">
+        <a class="hamburger-link" href="homepage.html">Home</a>
+        <a class="hamburger-link" href="properties.html">Properties</a>
+        <a class="hamburger-link" href="concept-map.html">Community Map</a>
+        <a class="hamburger-link" href="about-us.html">About Us</a>
+        <a class="hamburger-link" href="service.html">Services</a>
+        <a class="hamburger-link" href="contact.html">Contact</a>
+      </nav>
     </header>
 
     <section class="hero">
         <div class="hero-content">
             <h1>Find Your Place in Central Luzon</h1>
 
-            <p>
+            <p class="hero-p">
                 From cozy houses and modern apartments to sleek condos and prime lots-
                 we connect you with properties that match your lifestyle, your budget,
                 and your future.
             </p>
 
             <div class="hero-buttons">
-                <a href="#" class="btn primary-btn">Browse Properties</a>
-                <a href="#" class="btn secondary-btn">Book a Consultation</a>
+                <a href="properties.html" class="btn primary-btn">Browse Properties</a>
+                <a href="contact.html" class="btn secondary-btn">Book a Consultation</a>
             </div>
         </div>
     </section>
@@ -65,12 +76,146 @@
 
         </div>
 
-        <button class="search-button">Search Map</button>
+        <button class="search-button"><a href="concept-map.html">Search Map</a></button>
     </div>
     
     <main class="container">
 
         <div class="main-grid">
+
+            <div>
+
+                <section class="why-decker-section">
+                    <h2>Why Decker Homes Is Your Ideal Realtor</h2>
+
+                    <div class="why-box">
+                        <p>
+                            Finding a property is easy. Finding the right one - at the right price, 
+                            in the right neighborhood, with a team that actually listens. Decker Homes
+                            solves that. We've spent  10 years building relationships across Central
+                            Luzon, studying every pocket of Pampanga's market, and refining a process
+                            that puts your goals at center. Our agents don't just open doors; they
+                            open up possibilities you hadn't considered. From your first inquiry to the 
+                            moment you hold the keys, you're not another transaction. You're the reason
+                            we show up.
+                        </p>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>What Our Clients Say</h2>
+
+                    <div class="testimonial-slider" role="group" aria-roledescription="carousel" aria-label="Client reviews">
+
+                        <div class="slider-viewport" tabindex="0">
+
+                            <div class="testimonials">
+
+                                <article class="testimonial">
+                                    <div class="stars">★★★★★</div>
+                                    <p class="reviews-p">
+                                        "I thought buying a house would take months of stress. 
+                                        Decker Homes got us from viewing to closing in under five weeks.
+                                        The team handled everything — the paperwork, the negotiations,
+                                        even coordinating with the bank. I barely had to lift a finger."
+                                    </p>
+
+                                    <div class="client">
+                                        <div class="client-image"></div>
+
+                                        <div>
+                                            <h4>Maria C.</h4>
+                                            <p class="buyer-review-p">First Time Homeowner, Angeles City</p>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <article class="testimonial">
+                                    <div class="stars">★★★★★</div>
+                                    <p class="reviews-p">
+                                        "We relocated from Manila to Pampanga and had no idea where to start.
+                                         Our agent took us on neighborhood tours, explained the pros and 
+                                         cons of each area, and never pressured us. Three months later, 
+                                         we're in a home we genuinely love."
+                                    </p>
+
+                                    <div class="client">
+                                        <div class="client-image"></div>
+
+                                        <div>
+                                            <h4>The Reyes Family</h4>
+                                            <p class="buyer-review-p">Relocating Buyers, San Fernando</p>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <article class="testimonial">
+                                    <div class="stars">★★★★★</div>
+                                    <p class="reviews-p">
+                                        "I've dealt with three realtors before Decker Homes, 
+                                        and the difference is night and day. They actually listened 
+                                        to what I wanted — not what they wanted to sell. 
+                                        Found me a condo unit that checked every single box on my list."
+                                    </p>
+
+                                    <div class="client">
+                                        <div class="client-image"></div>
+
+                                        <div>
+                                            <h4>Kenneth T.</h4>
+                                            <p class="buyer-review-p">Condo Buyer, Clark Freeport</p>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <article class="testimonial">
+                                    <div class="stars">★★★★★</div>
+                                    <p class="reviews-p">
+                                        "Selling our family home was emotional. 
+                                        The team respected that. They staged the property beautifully, 
+                                        ran a smart campaign, and we closed above asking within two 
+                                        weeks of listing. I can't recommend them enough."
+                                    </p>
+
+                                    <div class="client">
+                                        <div class="client-image"></div>
+
+                                        <div>
+                                            <h4>Aurora D.</h4>
+                                            <p class="buyer-review-p">Home Seller, Pampanga</p>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <article class="testimonial">
+                                    <div class="stars">★★★★★</div>
+                                    <p class="reviews-p">
+                                        "What stood out wasn't just the market knowledge — 
+                                        it was how available they were. Late-night questions, 
+                                        last-minute viewing requests, even helping us understand the 
+                                        fine print on the contract. You're genuinely in good hands with these people."
+                                    </p>
+
+                                    <div class="client">
+                                        <div class="client-image"></div>
+
+                                        <div>
+                                            <h4>Mark & Jenny L.</h4>
+                                            <p class="buyer-review-p">First Time Investors, Angeles City</p>
+                                        </div>
+                                    </div>
+                                </article>
+
+                            </div>
+
+                        </div>
+
+                        <div class="slider-overlay" aria-hidden="true"></div>
+
+                    </div>
+                </section>
+
+            </div>
 
             <div>
 
@@ -96,7 +241,7 @@
                     </div>
 
                     <div class="property-type">
-                        <span><img src="../images/apartment.png" alt="Apartment Icon" class="detail-icon"></span>
+                        <span><img src="../images/flat.png" alt="Apartment Icon" class="detail-icon"></span>
                         <p>Apartment</p>
                     </div>
 
@@ -106,7 +251,7 @@
                     </div>
 
                     <div class="property-type">
-                        <span><img src="../images/lot.png" alt="Lot Icon" class="detail-icon"></span>
+                        <span><img src="../images/land.png" alt="Lot Icon" class="detail-icon"></span>
                         <p>Lot</p>
                     </div>
 
@@ -120,7 +265,7 @@
                         <div class="property-info">
                             <span>HOUSE</span>
                             <h3>Spacious Suburban House</h3>
-                            <p>
+                            <p class="types-p">
                                 Features a wide garden space where kids can play, situated in a 
                                 quiet family-friendly subdivision.
                             </p>
@@ -133,7 +278,7 @@
                         <div class="property-info">
                             <span>APARTMENT</span>
                             <h3>Budget-Friendly Apartment</h3>
-                            <p>
+                            <p class="types-p">
                                 Keeps you close to major commercial hubs without
                                 stretching your monthly budget.
                             </p>
@@ -146,7 +291,7 @@
                         <div class="property-info">
                             <span>CONDO</span>
                             <h3>Low-Maintenance Condo</h3>
-                            <p>
+                            <p class="types-p">
                                 Conveniently located near thriving business
                                 districts in Clark and San Fernando.
                             </p>
@@ -159,142 +304,13 @@
                         <div class="property-info">
                             <span>LOT</span>
                             <h3>Prime Vacant Lot</h3>
-                            <p>
+                            <p class="types-p">
                                 A clean plot of land giving you full freedom to
                                 build something entirely yours.
                             </p>
                         </div>
                     </article>
 
-                </section>
-
-            </div>
-
-            <div>
-
-                <section>
-                    <h2>Why Decker Homes Is Your Ideal Realtor</h2>
-
-                    <div class="why-box">
-                        <p>
-                            Finding a property is easy. Finding the right one - at the right price, 
-                            in the right neighborhood, with a team that actually listens. Decker Homes
-                            solves that. We've spent  10 years building relationships across Central
-                            Luzon, studying every pocket of Pampanga's market, and refining a process
-                            that puts your goals at center. Our agents don't just open doors; they
-                            open up possibilities you hadn't considered. From your first inquiry to the 
-                            moment you hold the keys, you're not another transaction. You're the reason
-                            we show up.
-                        </p>
-                    </div>
-                </section>
-
-                <section>
-                    <h2>What Our Clients Say</h2>
-
-                    <div class="testimonials">
-
-                        <article class="testimonial">
-                            <div class="stars">★★★★★</div>
-
-                            <p>
-                                "I thought buying a house would take months of stress. 
-                                Decker Homes got us from viewing to closing in under five weeks.
-                                The team handled everything — the paperwork, the negotiations,
-                                even coordinating with the bank. I barely had to lift a finger."
-                            </p>
-
-                            <div class="client">
-                                <div class="client-image"></div>
-
-                                <div>
-                                    <h4>Maria C.</h4>
-                                    <p>First Time Homeowner, Angeles City</p>
-                                </div>
-                            </div>
-                        </article>
-
-                        <article class="testimonial">
-                            <div class="stars">★★★★★</div>
-
-                            <p>
-                                "We relocated from Manila to Pampanga and had no idea where to start.
-                                 Our agent took us on neighborhood tours, explained the pros and 
-                                 cons of each area, and never pressured us. Three months later, 
-                                 we're in a home we genuinely love."
-                            </p>
-
-                            <div class="client">
-                                <div class="client-image"></div>
-
-                                <div>
-                                    <h4>The Reyes Family</h4>
-                                    <p>Relocating Buyers, San Fernando</p>
-                                </div>
-                            </div>
-                        </article>
-
-                        <article class="testimonial">
-                            <div class="stars">★★★★★</div>
-
-                            <p>
-                                "I've dealt with three realtors before Decker Homes, 
-                                and the difference is night and day. They actually listened 
-                                to what I wanted — not what they wanted to sell. 
-                                Found me a condo unit that checked every single box on my list."
-                            </p>
-
-                            <div class="client">
-                                <div class="client-image"></div>
-
-                                <div>
-                                    <h4>Kenneth T.</h4>
-                                    <p>Condo Buyer, Clark Freeport</p>
-                                </div>
-                            </div>
-                        </article>
-
-                        <article class="testimonial">
-                            <div class="stars">★★★★★</div>
-
-                            <p>
-                                "Selling our family home was emotional. 
-                                The team respected that. They staged the property beautifully, 
-                                ran a smart campaign, and we closed above asking within two 
-                                weeks of listing. I can't recommend them enough."
-                            </p>
-
-                            <div class="client">
-                                <div class="client-image"></div>
-
-                                <div>
-                                    <h4>Aurora D.</h4>
-                                    <p>Home Seller, Pampanga</p>
-                                </div>
-                            </div>
-                        </article>
-
-                        <article class="testimonial">
-                            <div class="stars">★★★★★</div>
-
-                            <p>
-                                "What stood out wasn't just the market knowledge — 
-                                it was how available they were. Late-night questions, 
-                                last-minute viewing requests, even helping us understand the 
-                                fine print on the contract. You're genuinely in good hands with these people."
-                            </p>
-
-                            <div class="client">
-                                <div class="client-image"></div>
-
-                                <div>
-                                    <h4>Mark & Jenny L.</h4>
-                                    <p>First Time Investors, Angeles City</p>
-                                </div>
-                            </div>
-                        </article>
-
-                    </div>
                 </section>
 
             </div>

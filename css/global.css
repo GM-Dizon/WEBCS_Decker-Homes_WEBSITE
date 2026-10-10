@@ -1,0 +1,279 @@
+/*Decker Homes - Global styles (shared by every page)*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+:root {
+  --blue: #0b4a85;
+  --blue-dark: #083a6b;
+  --white: #ffffff;
+  --bg: #f4f6f9;
+  --text: #333a47;
+  --muted: #6b7280;
+  --border: #e3e7ee;
+  --star: #f5b301;
+
+  --radius: 8px;
+  --shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  --max-width: 1200px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: clip;
+}
+
+body {
+  font-family: "Roboto", Arial, sans-serif;
+  color: var(--text);
+  background-color: var(--bg);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3, h4 {
+  color: var(--blue);
+  line-height: 1.25;
+}
+
+h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/*Header*/
+header {
+  background-color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0.75rem 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.logo img {
+  height: 48px;
+  width: auto;
+}
+
+/*Navigation*/
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+nav a {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text);
+  padding: 0.25rem 0;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+nav a:hover {
+  color: var(--blue);
+  border-bottom-color: var(--blue);
+}
+
+#hamburger-nav {
+  display: none;
+  position: relative;
+  width: 28px;
+  height: 22px;
+  cursor: pointer;
+}
+
+#hamburger-nav span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--blue);
+  border-radius: 2px;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+#hamburger-nav span:nth-child(1) {
+  transform: translateY(0);
+}
+
+#hamburger-nav span:nth-child(2) {
+  transform: translateY(9.5px);
+}
+
+#hamburger-nav span:nth-child(3) {
+  transform: translateY(19px);
+}
+
+#hamburger-nav.active span:nth-child(1) {
+  transform: translateY(9.5px) rotate(45deg);
+}
+
+#hamburger-nav.active span:nth-child(2) {
+  opacity: 0;
+}
+
+#hamburger-nav.active span:nth-child(3) {
+  transform: translateY(9.5px) rotate(-45deg);
+}
+
+.hamburger-link {
+  display: block;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
+  border-radius: var(--radius);
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.primary-btn {
+  background-color: var(--blue);
+  color: var(--white);
+  border: 2px solid var(--blue);
+}
+
+.primary-btn:hover {
+  background-color: var(--blue-dark);
+  border-color: var(--blue-dark);
+}
+
+.secondary-btn {
+  background-color: var(--white);
+  color: var(--blue);
+  border: 2px solid var(--white);
+}
+
+.secondary-btn:hover {
+  background-color: transparent;
+  color: var(--white);
+}
+
+.detail-icon {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+/*Footer*/
+footer {
+  background-color: var(--blue);
+  color: var(--white);
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+
+footer p {
+  font-size: 0.85rem;
+  margin: 0.25rem 0;
+}
+
+footer a {
+  color: var(--white);
+  text-decoration: underline;
+}
+
+footer a:hover {
+  opacity: 0.8;
+}
+
+/*Responsive: Tablet (768px)*/
+@media (max-width: 768px) {
+  header {
+    justify-content: space-between;
+    text-align: left;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  #hamburger-nav {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    flex-basis: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  .hamburger-link {
+    padding: 0.65rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .hamburger-link:last-child {
+    border-bottom: none;
+  }
+}
+
+@media (max-width: 425px) {
+  header {
+    justify-content: space-between;
+    text-align: left;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  #hamburger-nav {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    flex-basis: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  .hamburger-link {
+    padding: 0.65rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .hamburger-link:last-child {
+    border-bottom: none;
+  }
+}

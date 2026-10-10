@@ -4,23 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Properties | Decker Homes</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/concept-map.css">
+    <script src="../js/shared.js" defer></script>
   </head>
 
   <body>
 
     <header>
-      <div class="logo">
-        <img src="../images/Decker-logo-photo (1).png" alt="Decker Homes Logo">
+        <div class="logo">
+            <a href="homepage.html">
+                <img src="../images/Decker-logo-photo (1).png" alt="Decker Homes Logo">
+            </a>
+        </div>
+
+      <div id="hamburger-nav" role="button" tabindex="0" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
 
-      <nav>
-        <a href="homepage.html">Home</a>
-        <a href="properties.html">Properties</a>
-        <a href="concept-map.html">Community Map</a>
-        <a href="about-us.html">About Us</a>
-        <a href="service.html">Services</a>
-        <a href="contact.html">Contact</a>
+      <nav id="nav">
+        <a class="hamburger-link" href="homepage.html">Home</a>
+        <a class="hamburger-link" href="properties.html">Properties</a>
+        <a class="hamburger-link" href="concept-map.html">Community Map</a>
+        <a class="hamburger-link" href="about-us.html">About Us</a>
+        <a class="hamburger-link" href="service.html">Services</a>
+        <a class="hamburger-link" href="contact.html">Contact</a>
       </nav>
     </header>
 
@@ -40,55 +50,65 @@
 
       <section class="filters">
 
-        <button type="button">Filters</button>
+        <div class="filter-scroll">
 
-        <label for="min-price">Min</label>
-        <select id="min-price">
-          <option>₱250,000</option>
-          <option>₱500,000</option>
-          <option>₱750,000</option>
-          <option>₱1,000,000</option>
-        </select>
+          <button type="button">Filters</button>
 
-        <label for="max-price">Max</label>
-        <select id="max-price">
-          <option>₱700,500</option>
-          <option>₱1,000,000</option>
-          <option>₱2,000,000</option>
-          <option>₱5,000,000</option>
-        </select>
+          <label for="min-price">Min</label>
+          <select id="min-price">
+            <option>₱250,000</option>
+            <option>₱500,000</option>
+            <option>₱750,000</option>
+            <option>₱1,000,000</option>
+          </select>
 
-        <label for="location">Location</label>
-        <select id="location">
-          <option>Downtown</option>
-          <option>Clark</option>
-          <option>Angeles City</option>
-          <option>San Fernando</option>
-        </select>
+          <label for="max-price">Max</label>
+          <select id="max-price">
+            <option>₱700,500</option>
+            <option>₱1,000,000</option>
+            <option>₱2,000,000</option>
+            <option>₱5,000,000</option>
+          </select>
 
-        <label for="property-type">Property Type</label>
-        <select id="property-type">
-          <option>Apartments</option>
-          <option>Houses</option>
-          <option>Condominiums</option>
-          <option>Lots</option>
-        </select>
+          <label for="location">Location</label>
+          <select id="location">
+            <option>Downtown</option>
+            <option>Clark</option>
+            <option>Angeles City</option>
+            <option>San Fernando</option>
+          </select>
 
-        <label for="floors">Floors</label>
-        <select id="floors">
-          <option>2-4 Floors</option>
-          <option>1 Floor</option>
-          <option>5+ Floors</option>
-        </select>
+          <label for="property-type">Property Type</label>
+          <select id="property-type">
+            <option>Apartments</option>
+            <option>Houses</option>
+            <option>Condominiums</option>
+            <option>Lots</option>
+          </select>
 
-        <button type="reset">Clear</button>
-        <button type="submit">Apply</button>
+          <label for="floors">Floors</label>
+          <select id="floors">
+            <option>2-4 Floors</option>
+            <option>1 Floor</option>
+            <option>5+ Floors</option>
+          </select>
+
+        </div>
+
+        <div class="filter-actions">
+
+          <button type="reset">Clear</button>
+          <button type="submit">Apply</button>
+
+        </div>
 
       </section>
 
       <section class="community-map">
 
         <div class="map" id="map">
+
+          <img class="map-image" src="../images/map.png" alt="" draggable="false">
 
           <div class="map-info">
             <h1>Map View</h1>
